@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* MIX */
+body {
+  min-width: 500px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+#wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+/* main */
+main {
+  height: calc(100vh - 90px);
+  background-color: saddlebrown;
+}
+
+main::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* nav sx */
+main .main-nav {
+  float: left;
+  width: 230px;
+  height: 100%;
+  background-color: salmon;
+}
+
+main .main-nav .nav-top {
+  height: calc(100% - 80px);
+  background-color:skyblue;
+}
+
+main .main-nav .nav-top .nav-logo-mobile{
+  display: none;
+}
+
+main .main-nav .nav-bottom {
+  height: 80px;
+  background-color: seashell;
+}
+
+/* content */
+main #content {
+  float: left;
+  height: 100%;
+  width: calc(100% - 230px);
+  background-color: seagreen;
+  overflow-y: auto;
+}
+
+main #content .call-to-action {
+  position: fixed;
+  width: calc(100% - 230px);
+  height: 90px;
+  background-color: rgba(255,0,0,0.4);
+}
+
+
+/* footer */
+footer {
+  height: 90px;
+  background-color: rosybrown;
+}
+
+footer #player {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* media q */
+
+@media (max-width: 600px) {
+
+  main .main-nav .nav-top .nav-logo-mobile{
+    display:block;
+  }
+  main .main-nav .nav-top .nav-logo{
+    display: none;
+  }
+  main .main-nav {
+    width: 50px;
+  }
+  main #content, main #content .call-to-action {
+    width: calc(100% - 50px);
+  }
+
+
+}
